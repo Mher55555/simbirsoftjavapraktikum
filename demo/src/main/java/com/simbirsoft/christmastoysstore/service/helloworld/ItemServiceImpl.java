@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class ItemServiceImpl implements  ItemService{
 
-    public ItemRepository userRepository;
+    public ItemRepository itemRepository;
 
     @Autowired
     public ItemService (ItemService itemRepository) {
