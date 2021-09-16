@@ -12,6 +12,6 @@ public interface ItemService {
     public String getHello();
     public item findById();
     public List<item> findAll();
-    public item saveUser();
+    public item saveItem();
     public void deleteById();
 }
