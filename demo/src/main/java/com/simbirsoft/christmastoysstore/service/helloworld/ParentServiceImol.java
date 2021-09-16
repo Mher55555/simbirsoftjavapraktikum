@@ -1,4 +1,4 @@
-package com.simbirsoft.christmastoysstore.service.helloworld;
+/*package com.simbirsoft.christmastoysstore.service.helloworld;
 
 import com.simbirsoft.christmastoysstore.entity.User;
 import com.simbirsoft.christmastoysstore.repository.UserRepository;
@@ -43,3 +43,4 @@ public class UserServiceImpl implements  UserService{
 
 
 }
+*/
