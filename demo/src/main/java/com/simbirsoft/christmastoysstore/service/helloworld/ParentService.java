@@ -1,13 +1,15 @@
-import com.simbirsoft.christmastoysstore.entity.User;
+package com.simbirsoft.christmastoysstore.service.helloworld;
+
+import com.simbirsoft.christmastoysstore.entity.Parent;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public interface ParentService {
-    public String getHello();
-    public Parent findById();
-    public List<Parent> findAll();
-    public Parent saveUser();
-    public void deleteById();
-}
+        public Parent findById(Long id);
+        public List<Parent> findAll();
+        public Parent saveParent(Parent parent);
+        public void deleteById(Long id);
+    }
+

@@ -1,47 +1,34 @@
 package com.simbirsoft.christmastoysstore.service.helloworld;
 
 import com.simbirsoft.christmastoysstore.entity.Parent;
-import com.simbirsoft.christmastoysstore.entity.User;
 import com.simbirsoft.christmastoysstore.repository.ParentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-    @Service
-    public class ParentServiceImpl implements  ParentService{
+@Service
+public class ParentServiceImpl implements ParentService {
+    @Autowired
+    public ParentRepository parentRepository;
 
-        public ParentRepository parentRepository;
+    @Override
+    public Parent findById(Long id) {
+        return parentRepository.findById(id).get();
+    }
 
-        @Autowired
-        public ParentServiceImpl (ParentService parentRepository) {
-            this.parentRepository = (ParentRepository) parentRepository;
-        }
+    @Override
+    public List<Parent> findAll() {
+        return parentRepository.findAll();
+    }
 
-        @Override
-        public String getHello() {
-            return null;
-        }
+    @Override
+    public Parent saveParent(Parent parent) {
+        return parentRepository.save(parent);
+    }
 
-        @Override
-        public Parent findById() {
-            return  parentRepository.getOne(id);;
-        }
-
-        public List<Parent> findAll(){
-            return parentRepository.findAll();
-        }
-
-        @Override
-        public Parent saveUser() {
-            return  parentRepository.save(Parent);;
-        }
-
-        @Override
-        public void deleteById() {
-            parentRepository.deleteById(id);
-        }
-
-
+    @Override
+    public void deleteById(Long id) {
+        parentRepository.deleteById(id);
     }
 }

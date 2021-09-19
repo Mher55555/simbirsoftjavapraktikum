@@ -17,6 +17,7 @@
 		<java.version>16</java.version>
 		<spring-cloud.version>2020.0.3</spring-cloud.version>
 	</properties>
+
 	<dependencies>
 
 		<dependency>
@@ -37,11 +38,13 @@
 			<version>2.9.2</version>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.0.7.Final</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -119,6 +122,7 @@
 					<target>14</target>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 

@@ -1,5 +1,6 @@
 package com.simbirsoft.christmastoysstore.service.helloworld;
 
+import com.simbirsoft.christmastoysstore.entity.Item;
 import com.simbirsoft.christmastoysstore.entity.User;
 import com.simbirsoft.christmastoysstore.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +10,8 @@ import java.util.List;
 
 @Service
 public interface ItemService {
-    public String getHello();
-    public item findById();
-    public List<item> findAll();
-    public item saveItem();
-    public void deleteById();
+    public Item findById(Long id);
+    public List<Item> findAll();
+    public Item saveItem(Item item);
+    public void deleteById(Long id);
 }

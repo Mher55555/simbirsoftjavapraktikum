@@ -6,23 +6,24 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name="item")
-public class item {
+@Table(name="Item")
+public class Item {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
-    @JoinColumn (name ="parent", referencedColumnName = "name")
+
 
     @Column(name="name")
     private String name;
     @Column(name="discription")
     public String discription;
-    @Column(name="description")
+    @Column(name="amount")
     public Integer amount;
-    @Column(name="parentID")
-    public String parentID;
+
+    @OneToOne
+    @JoinColumn (name ="parent", referencedColumnName = "id")
+    public Parent parentID;
 
 
 

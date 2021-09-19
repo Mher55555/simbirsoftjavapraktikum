@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-07-07-04
+      author: Karvashkin
+      changes:
+        - createTable:
+            tableName: order_detail
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: order_detail_pkey
+              - column:
+                  name: item_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: item_amount
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type_operation
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false

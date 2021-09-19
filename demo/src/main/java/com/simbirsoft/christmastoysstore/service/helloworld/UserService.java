@@ -6,10 +6,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+
 public interface UserService {
-    public String getHello();
-    public User findById();
-    public List<User> findAll();
-    public User saveUser();
-    public void deleteById();
-}
+        public User findById(Long id);
+        public List<User> findAll();
+        public User saveUser(User user);
+        public void deleteById(Long id);
+    }
+

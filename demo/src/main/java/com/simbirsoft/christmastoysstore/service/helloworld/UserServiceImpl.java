@@ -4,42 +4,31 @@ import com.simbirsoft.christmastoysstore.entity.User;
 import com.simbirsoft.christmastoysstore.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
-
 @Service
-public class UserServiceImpl implements  UserService{
-
+public class UserServiceImpl implements UserService {
+    @Autowired
     public UserRepository userRepository;
 
-    @Autowired
-    public UserService (UserService userRepository) {
-        this.userRepository = userRepository;
+    @Override
+    public User findById(Long id) {
+        return userRepository.findById(id).get();
     }
 
     @Override
-    public String getHello() {
-        return null;
-    }
-
-    @Override
-    public User findById() {
-        return  return userRepository.getOne(id);;
-    }
-
-    public List<User> findAll(){
+    public List<User> findAll() {
         return userRepository.findAll();
     }
 
     @Override
-    public User saveUser() {
-        return  userRepository.save(user);;
+    public User saveUser(User user) {
+        return userRepository.save(user);
     }
 
     @Override
-    public void deleteById() {
+    public void deleteById(Long id) {
         userRepository.deleteById(id);
     }
-
-
 }

@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-07-07-010
+      comment: add item_id to order
+      author: Karvashkin Roman
+      changes:
+        - addForeignKeyConstraint:
+            constraintName: fk_order_detail_item_id
+            baseTableName: order_detail
+            baseColumnNames: item_id
+            referencedTableName: item
+            referencedColumnNames: id
+            onDelete: 'CASCADE'
+            onUpdate: 'RESTRICT'

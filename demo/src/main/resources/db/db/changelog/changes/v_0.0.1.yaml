@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/2021-07-07/01-create-user-table.yaml
+  - include:
+      file: db/changelog/2021-07-07/02-create-item-table.yaml
+  - include:
+      file: db/changelog/2021-07-07/03-create-item_category-table.yaml
+  - include:
+      file: db/changelog/2021-07-07/04-create-order_detail-table.yaml
+  - include:
+      file: db/changelog/2021-07-07/05-create-order-table.yaml
+  - include:
+      file: db/changelog/2021-07-07/06-create-order_list_id_order_id-table.yaml
+  - include:
+      file: db/changelog/2021-07-07/07-create-storage-table.yaml
+  - include:
+      file: db/changelog/2021-07-07/08-add-category_id-to-item.yaml
+  - include:
+      file: db/changelog/2021-07-07/09-add-item_id-to-storage.yaml
+  - include:
+        file: db/changelog/2021-07-07/010-add-item_id-to-order_details.yaml
+  - include:
+        file: db/changelog/2021-07-07/011-add-user_id-to-order.yaml
