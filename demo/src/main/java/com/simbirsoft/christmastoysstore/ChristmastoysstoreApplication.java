@@ -9,7 +9,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class ChristmastoysstoreApplication {
 
+
 	public static void main(String[] args) {
+
 		ConfigurableApplicationContext configurableApplicationContext =
 				SpringApplication.run(ChristmastoysstoreApplication.class, args);
 		ParentRepository parentRepository =

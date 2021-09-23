@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name="Item")
+@Table(name="item")
 public class Item {
 
     @Id
@@ -14,16 +14,16 @@ public class Item {
     private Long id;
 
 
-    @Column(name="name")
-    private String name;
-    @Column(name="discription")
-    public String discription;
-    @Column(name="amount")
-    public Integer amount;
+    @Column(name="item_name")
+    private String item_name;
+    @Column(name="description")
+    public String description;
+    @Column(name="price")
+    public Integer price;
 
     @OneToOne
-    @JoinColumn (name ="parent", referencedColumnName = "id")
-    public Parent parentID;
+    @JoinColumn (name ="category_id", referencedColumnName = "id")
+    public Parent item_category;
 
 
 
