@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-07-07-09
+      comment: add item_id to storage
+      author: Karvashkin Roman
+      changes:
+        - addForeignKeyConstraint:
+            constraintName: fk_storage_item_id
+            baseTableName: storage
+            baseColumnNames: item_id
+            referencedTableName: item
+            referencedColumnNames: id
+            onDelete: 'CASCADE'
+            onUpdate: 'RESTRICT'

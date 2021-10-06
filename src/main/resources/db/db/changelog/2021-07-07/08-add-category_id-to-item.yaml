@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-07-07-08
+      comment: add category_id to item
+      author: Karvashkin Roman
+      changes:
+        - addForeignKeyConstraint:
+            constraintName: fk_item_category_id
+            baseTableName: item
+            baseColumnNames: category_id
+            referencedTableName: item_category
+            referencedColumnNames: id
+            onDelete: 'CASCADE'
+            onUpdate: 'RESTRICT'

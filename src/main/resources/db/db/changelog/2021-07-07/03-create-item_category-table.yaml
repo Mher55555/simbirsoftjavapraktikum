@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2021-07-07-03
+      author: Karvashkin
+      changes:
+        - createTable:
+            tableName: item_category
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyNmae: item_category_pkey
+                    nullable: false
+              - column:
+                  name: category_name
+                  type: VARCHAR(100)
+                  constraints:
+                    unique: true
+                    nullable: false
